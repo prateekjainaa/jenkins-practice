@@ -18,7 +18,7 @@ node {
             }
         }
     }
-    stage('Test') 
+    stage('Test') {
         withEnv(["MVN_HOME=$mvnHome"]) {
         // Run the maven build
          sh '"$MVN_HOME/bin/mvn" test'
