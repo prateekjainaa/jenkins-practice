@@ -18,6 +18,10 @@ node {
             }
         }
     }
+    stage('Test') {
+        // Run the maven build
+         sh '"$MVN_HOME/bin/mvn" test'
+    }
     stage('Results') {
         junit '**/target/surefire-reports/TEST-*.xml'
         archiveArtifacts 'target/*.jar'
