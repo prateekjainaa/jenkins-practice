@@ -9,7 +9,7 @@ node {
         mvnHome = tool 'M3'
     }
     stage('Build') {
-echo "custom_param %my_custom_param%"
+       bat(/echo "custom_param %my_custom_param%"/)
         
         // Run the maven build
         withEnv(["MVN_HOME=$mvnHome"]) {
