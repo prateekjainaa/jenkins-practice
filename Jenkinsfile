@@ -10,7 +10,7 @@ node {
     }
     stage('Build') {
         sh 'echo "foooo"'
-       sh 'echo "custom_param ${params.my_custom_param}"'
+       sh 'echo "custom_param ${my_custom_param}"'
         
         // Run the maven build
         withEnv(["MVN_HOME=$mvnHome"]) {
